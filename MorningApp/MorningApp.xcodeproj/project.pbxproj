@@ -19,6 +19,7 @@
 		C3E12E7A1F2F15FA008A56CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3E12E781F2F15FA008A56CB /* LaunchScreen.storyboard */; };
 		C3E12E841F2F1684008A56CB /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E831F2F1684008A56CB /* SWRevealViewController.m */; };
 		C3E12E891F2F1DC4008A56CB /* NewPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E12E881F2F1DC4008A56CB /* NewPlanViewController.swift */; };
+		CC6EC5651F443083003E4238 /* Nanjing,China.gpx in Resources */ = {isa = PBXBuildFile; fileRef = CC6EC5641F443083003E4238 /* Nanjing,China.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C3E12E821F2F1684008A56CB /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		C3E12E831F2F1684008A56CB /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		C3E12E881F2F1DC4008A56CB /* NewPlanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPlanViewController.swift; sourceTree = "<group>"; };
+		CC6EC5641F443083003E4238 /* Nanjing,China.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Nanjing,China.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				C3DBF76E1F3022CA000C16B9 /* View */,
 				C3DBF76F1F302308000C16B9 /* Storyboards */,
 				C3E12E761F2F15FA008A56CB /* Assets.xcassets */,
+				CC6EC5641F443083003E4238 /* Nanjing,China.gpx */,
 				C3E12E7B1F2F15FA008A56CB /* Info.plist */,
 				C3E12E731F2F15FA008A56CB /* MorningApp.xcdatamodeld */,
 				C3DBF7721F305136000C16B9 /* Helpers */,
@@ -184,6 +187,7 @@
 			files = (
 				C3E12E7A1F2F15FA008A56CB /* LaunchScreen.storyboard in Resources */,
 				C3E12E771F2F15FA008A56CB /* Assets.xcassets in Resources */,
+				CC6EC5651F443083003E4238 /* Nanjing,China.gpx in Resources */,
 				C3E12E721F2F15FA008A56CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
