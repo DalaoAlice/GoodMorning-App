@@ -45,9 +45,20 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // getData()在这里调用
         getData()
-        newplantableView.reloadData()
+        
+        // 8.18 Fixed
+        // 在这里计算newtime，每个task的时间都只会被计算一次，就不会出现叠加问题了
         NewPlanViewController.newtime = 0
+        for task:Task in tasks
+        {
+            NewPlanViewController.newtime += task.time //here
+        }
+        AddTaskViewController.totaltime2 = NewPlanViewController.newtime
+        print(AddTaskViewController.totaltime2)
+        //
+        newplantableView.reloadData()
         //print("dad \(NewPlanViewController.countrow)")
         
     }
@@ -67,7 +78,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
     
    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        // 创建单元格
         
         let cell = UITableViewCell()
         let titletext = "Title:     "
@@ -83,9 +94,11 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.textLabel?.textColor = UIColor .orange
         cell.textLabel?.font = UIFont.init(name: "Chalkduster", size: 13)
         
-        NewPlanViewController.newtime += task.time
-        AddTaskViewController.totaltime2 = NewPlanViewController.newtime
-        print(AddTaskViewController.totaltime2)
+        // 8.18 Fixed
+        //NewPlanViewController.newtime += task.time //here
+        //AddTaskViewController.totaltime2 = NewPlanViewController.newtime
+        //print(AddTaskViewController.totaltime2)
+        
         changewords()
         return cell
         
@@ -98,7 +111,7 @@ class NewPlanViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
-        if editingStyle == .delete
+        if editingStyle == .delete // 执行删除时
         {
             let task = tasks[indexPath.row]
             AddTaskViewController.totaltime = AddTaskViewController.totaltime-task.time

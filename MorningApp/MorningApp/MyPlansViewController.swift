@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-import MapKit
 
 
 class MyPlansViewController:UIViewController, CLLocationManagerDelegate{
@@ -69,12 +68,11 @@ class MyPlansViewController:UIViewController, CLLocationManagerDelegate{
             
         }
               _ = Timer.scheduledTimer(timeInterval: 1, target:self, selector: Selector("updateTime"), userInfo: nil, repeats: true)
-            totalTimeLabel.text = String(NewPlanViewController.newtime)
+            totalTimeLabel.text = String(NewPlanViewController.newtime) // TODO
            //getWeather(city:"Beijing")
             StartLocating() //And the function will call getWeather()
     }
   
-
 
 func getWeather(city: String) {
     
